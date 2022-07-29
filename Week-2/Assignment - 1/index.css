@@ -1,9 +1,11 @@
-.body {
+/* css for main Container */
+.body {       
   display: flex;
   justify-content: center;
   margin-left: 120px;
   margin-right: 120px;
 }
+/* css for container */
 .main {
   display: flex;
   flex-direction: column;
