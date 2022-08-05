@@ -14,3 +14,8 @@ increment();
 increment();
 increment();
 log(); // What is logged?
+
+
+
+
+// Output will count is 0 because of clousure.
