@@ -1,7 +1,7 @@
 function add(a,b){
     return a+b
 }
-const  memoize=(fn)=>{
+const memoize=(fn)=>{
     let cache = {};
     return (a,b)=>{
         if (a,b in cache){
