@@ -18,4 +18,5 @@ log(); // What is logged?
 
 
 
-// Output will count is 0 because of clousure.
+// Output will be count is 0 because of clousure.
+//And there no logic to update message associated with count.
