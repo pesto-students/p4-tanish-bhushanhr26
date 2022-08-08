@@ -3,6 +3,7 @@ function add(a,b){
 }
 const memoize=(fn)=>{
     let cache = {};
+    console.log(cache)
     return (a,b)=>{
         if (a,b in cache){
             console.log('cache');
@@ -17,3 +18,5 @@ const memoize=(fn)=>{
 }
 const memoizeAdd = memoize(add)
 console.log(memoizeAdd(2,5))
+console.log(memoizeAdd(2,5))
+console.log(memoizeAdd(2,3))
