@@ -19,3 +19,9 @@ var me = new Teacher();
 
 me.initialize("John", 25);
 me.teach("Inheritance");
+
+me.initialize("Bhushan", 22);
+me.teach("Polymorphism");
+
+me.initialize("Samarpan", 23);
+me.teach("Nothing");
