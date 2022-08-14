@@ -1,18 +1,18 @@
-function fibonacciSeries(n){
-let n1 = 0;
-let n2 = 1;
-let result = 0 ;
-for(let i =0;i<n;i++){
-    //console.log("The Fibonacci Series is:")
-    console.log(n1)
-    result = n1 + n2;
-    n1 = n2;
-    n2 = result
-
-}
-return result
-}
-console.log(fibonacciSeries(5))
-// console.log(fibonacciSeries(6))
-// console.log(fibonacciSeries(2))
-// console.log(fibonacciSeries(10))
+const fibonaci = (n)=>({
+    [Symbol.iterator]:()=>{
+        let i =1;
+        let old =0,new1 = 0;
+        return {
+            next:()=>{
+                if(i++<=n){
+                    [old,new1] = [new1,(old+new1)||1];
+                    return {value:old,done:false}
+                }
+                else{
+                    return{done:true}
+                }
+            }
+        }
+    }
+})
+console.log([...fibonaci(6)]);
