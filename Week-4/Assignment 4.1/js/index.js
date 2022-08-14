@@ -1,7 +1,7 @@
 function getNumber() {
   let x = Math.random();
   let y = x.toFixed(2)
-  return new Promise(function (reject, resolve) {
+  return new Promise(function (resolve, reject) {
     if (y/5===0) {
       reject("It is Divisible by 5");
       return;
