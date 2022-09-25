@@ -3,7 +3,6 @@ import "../css/searchBar.css";
 import create from "../../assets/create.gif";
 
 export default function SearchBar(props) {
-    console.log(props.value,"value")
   return (
     <div className="searchBar">
       <input

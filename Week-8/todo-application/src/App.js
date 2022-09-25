@@ -10,10 +10,14 @@ function App() {
     value.push(x);
   }
   function handleDeleteClick(i) {
-    const removeItem = value.filter((x,i) => {
-      return x.i !== i;
+    const removeItem = value.splice(0, i);
+    setValue(removeItem);
+  }
+  function handleUpdate(x, i) {
+    const removeItem = value.filter((item) => {
+      return item.i !== i;
     });
-    setValue(value);
+    setSearchValue(removeItem);
   }
   console.log(value);
   return (
@@ -23,6 +27,7 @@ function App() {
       create={create}
       value={value}
       handleDeleteClick={handleDeleteClick}
+      handleUpdate={handleUpdate}
     />
   );
 }

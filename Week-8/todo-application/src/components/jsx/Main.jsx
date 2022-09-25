@@ -21,13 +21,14 @@ export default function main(props) {
             <div key={i} className="content">
               {x}
               <div>
-                <img src={edit} alt="edit" />
+                <img src={edit} alt="edit" onClick={()=>{
+                  props.handleUpdate(x,i)
+                }}/>
                 <img
                   src={trash}
                   alt="delete"
                   onClick={() => {
                     props.handleDeleteClick(i);
-                    console.log(i);
                   }}
                 />
               </div>
