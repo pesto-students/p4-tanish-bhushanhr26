@@ -9,17 +9,18 @@ function App() {
   function create(x) {
     value.push(x);
   }
-  function handleDeleteClick(i) {
-    const removeItem = value.splice(0, i);
+  function handleDeleteClick(id) {
+    const removeItem = value.splice(0, id);
+
     setValue(removeItem);
   }
-  function handleUpdate(x, i) {
-    const removeItem = value.filter((item) => {
-      return item.i !== i;
-    });
-    setSearchValue(removeItem);
+  function handleUpdate(x, id) {
+    const removeItem = value.splice(0, id);
+
+    setValue(removeItem);
+    setSearchValue(x);
   }
-  console.log(value);
+
   return (
     <Main
       searchValue={searchValue}
