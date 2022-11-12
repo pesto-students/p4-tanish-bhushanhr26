@@ -1,5 +1,5 @@
 const express = require('express');
-const router = require('./src/routes/routes');
+const router = require('./src/routes/weather.routes');
 require('dotenv').config();
 // Express app initialized, Port and API_KEY imported
 const app = express();
