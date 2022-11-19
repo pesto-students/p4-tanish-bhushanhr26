@@ -7,6 +7,7 @@ import {
 import {
   userAssests,
   updateUserAssests,
+  deleteUserById,
 } from "../controllers/assets.controllers.js";
 // import { upload } from "../controllers/image.controller.js";
 
@@ -17,5 +18,6 @@ router.post("/createUser", createUser);
 //router.patch("/user/:id" / updateUser);
 //router.post("/upload", upload);
 router.put("/updateUser/:id", updateUserAssests);
+router.delete("/deleteUser/:id", deleteUserById);
 
 export default router;

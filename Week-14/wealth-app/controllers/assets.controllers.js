@@ -34,3 +34,15 @@ export const updateUserAssests = async (req, res) => {
       res.status(404);
     });
 };
+export const deleteUserById = (req, res) => {
+  const { id } = req.params;
+  const deletedUser = equity
+    .findByIdAndDelete(id)
+    .then(() => {
+      res.status(201);
+      res.json(deletedUser);
+    })
+    .catch((err) => {
+      throw new Error(err);
+    });
+};
