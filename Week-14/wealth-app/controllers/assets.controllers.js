@@ -11,3 +11,26 @@ export const userAssests = async (req, res) => {
     res.json({ message: error.message });
   }
 };
+
+export const updateUserAssests = async (req, res) => {
+  const { id } = req.params;
+
+  await equity
+    .findByIdAndUpdate(id, {
+      $set: {
+        id: req.body.id,
+        assets: req.body.assets,
+
+        equity: req.body.equity,
+        fixedIncome: req.body.fixedIncome,
+        alternatives: req.body.alternatives,
+      },
+    })
+    .then(() => {
+      res.status(201);
+      res.json({ message: message.res });
+    })
+    .catch((err) => {
+      res.status(404);
+    });
+};
