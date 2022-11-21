@@ -1,0 +1,28 @@
+var rotateLinkedList = function (head, k) {
+  var count = 1;
+  var last = head;
+  var now = head;
+
+  if (!head || !head.next) return head;
+
+  while (last.next) {
+    last = last.next;
+    count++;
+  }
+
+  k %= count;
+
+  if (k === 0) return head;
+
+  while (k < count - 1) {
+    now = now.next;
+    k++;
+  }
+
+  last.next = head;
+  head = now.next;
+  now.next = null;
+
+  return head;
+};
+console.log(rotateLinkedList([2, 4, 7, 8, 9], 5));
